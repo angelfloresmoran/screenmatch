@@ -13,6 +13,10 @@ public class Titulo {
 
     private int totalDeLasEvaluaciones;
 
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
 
     public String getNombre() {
         return nombre;
@@ -24,10 +28,6 @@ public class Titulo {
 
     public int getDuracionEnMinutos() {
         return duracionEnMinutos;
-    }
-
-    public boolean isIncluidoEnElPlan() {
-        return incluidoEnElPlan;
     }
 
     public int getTotalDeLasEvaluaciones(){
@@ -55,6 +55,10 @@ public class Titulo {
         System.out.println("El nombre del Titulo es: " + nombre);
         System.out.println("Su fecha de lanzamiento es: " + fechaDeLanzamiento);
         System.out.println("Duración en minutos: "+ getDuracionEnMinutos());
+    }
+
+    public boolean isIncluidoEnElPlan() {
+        return incluidoEnElPlan;
     }
 
     public void evalua(double nota){
