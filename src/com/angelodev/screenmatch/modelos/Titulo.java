@@ -1,6 +1,6 @@
 package com.angelodev.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable <Titulo> {
     private String nombre;
 
     private int fechaDeLanzamiento;
@@ -68,5 +68,10 @@ public class Titulo {
 
     public double calculaMedia(){
         return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
+    }
+
+    @Override
+    public int compareTo(Titulo otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
     }
 }
